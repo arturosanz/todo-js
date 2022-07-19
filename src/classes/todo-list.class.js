@@ -42,7 +42,7 @@ export class TodoList {
   }
 
   cargarLocalStorage() {
-    this.todos = JSON.parse(localStorage.getItem('todo'));
+    this.todos = JSON.parse(localStorage.getItem('todo') || '[]');
     this.todos = this.todos.map((todo) => Todo.fromJson(todo));
   }
 }
